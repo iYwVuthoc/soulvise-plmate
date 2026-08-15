@@ -1,0 +1,4 @@
+interface:
+  display_name: "Soulvise Plmate 项目维护"
+  short_description: "理解、测试并安全维护 Soulvise Plmate 桌面陪伴项目"
+  default_prompt: "使用 $maintain-soulvise-plmate 了解项目并完成一次安全、可验证的修改。"

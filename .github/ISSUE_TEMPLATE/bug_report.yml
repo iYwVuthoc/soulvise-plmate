@@ -1,0 +1,69 @@
+name: Bug 报告
+description: 报告可复现的功能异常；安全漏洞请使用私密报告入口。
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请勿上传真实密钥、认证令牌、隐私截图、完整窗口标题或真实不良内容。
+
+  - type: input
+    id: version
+    attributes:
+      label: Soulvise Plmate 版本
+      placeholder: 例如 v0.2.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install
+    attributes:
+      label: 运行方式
+      options:
+        - 安装器
+        - 便携 EXE
+        - 源码运行
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 发生了什么，预期结果是什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 最小复现步骤
+      placeholder: |
+        1. 打开……
+        2. 点击……
+        3. 看到……
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境
+      description: Windows版本、显示缩放、Python版本（源码运行时）、使用的Agent类型；不要填写账号。
+
+  - type: textarea
+    id: sanitized_logs
+    attributes:
+      label: 脱敏信息
+      description: 只粘贴已经移除密钥、令牌、路径、标题和隐私内容的最小错误信息。
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我确认这不是需要私密报告的安全漏洞。
+          required: true
+        - label: 我确认未附带密钥、认证令牌、个人账号或隐私截图。
+          required: true

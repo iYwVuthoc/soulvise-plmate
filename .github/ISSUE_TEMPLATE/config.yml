@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 私密报告安全漏洞
+    url: https://github.com/runyelfy-art/soulvise-plmate/security/advisories/new
+    about: 请勿公开披露漏洞、密钥、令牌或隐私材料。
+  - name: 使用与开发文档
+    url: https://github.com/runyelfy-art/soulvise-plmate#readme
+    about: 提问前请先查看安装、Agent连接与隐私说明。

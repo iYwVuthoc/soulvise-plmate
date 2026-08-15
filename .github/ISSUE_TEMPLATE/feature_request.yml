@@ -1,0 +1,36 @@
+name: 功能建议
+description: 建议新的角色体验、Agent连接器、规则能力或平台支持。
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 想解决的问题
+      description: 请先描述使用场景和现有困难。
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议方案
+      description: 说明用户操作、预期反馈及必要的降级行为。
+    validations:
+      required: true
+
+  - type: textarea
+    id: privacy
+    attributes:
+      label: 隐私与权限影响
+      description: 是否涉及截图、联网、Agent权限、数据保存、程序启动或文件写入？
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: 范围确认
+      options:
+        - label: 我理解“协议兼容”不代表任意Agent无需适配即可安全深度连接。
+          required: true

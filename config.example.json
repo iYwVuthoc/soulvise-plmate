@@ -1,0 +1,60 @@
+{
+  "schema_version": 6,
+  "observation_enabled": false,
+  "supervision_enabled": false,
+  "companion_enabled": false,
+  "blindfolded": false,
+  "capture": {
+    "normal_interval_seconds": 10,
+    "active_interval_seconds": 5,
+    "stability_seconds": 5,
+    "fingerprint_distance": 8,
+    "content_dedup_minutes": 30,
+    "tracked_processes": ["chrome.exe", "msedge.exe", "firefox.exe", "discord.exe"]
+  },
+  "happiness": {
+    "initial_value": 50,
+    "interest_increment": 10,
+    "disinterest_decrement": 10,
+    "trigger_threshold": 0,
+    "reset_value": 50,
+    "intervention_cooldown_seconds": 60
+  },
+  "model": {
+    "vision_model": "gpt-5.6-luna",
+    "moderation_model": "omni-moderation-latest",
+    "chat_model": "gpt-5.6-luna",
+    "base_url": "https://api.openai.com/v1",
+    "request_timeout_seconds": 25,
+    "enabled": true
+  },
+  "moderation_policy": {
+    "blocking_categories": [
+      "sexual",
+      "sexual/minors",
+      "violence",
+      "violence/graphic"
+    ],
+    "vision_rule_confidence_threshold": 0.85
+  },
+  "intervention": {
+    "redirect_url": "https://www.bilibili.com/video/BV1LtMy63EbP"
+  },
+  "privacy": {
+    "retain_event_days": 30,
+    "save_raw_screenshots": false
+  },
+  "ui": {
+    "character_x": 80,
+    "character_y": 200,
+    "character_scale": 1.0,
+    "character_docked": true
+  },
+  "agent_routing": {
+    "primary_agent_id": "builtin.codex",
+    "capability_overrides": {},
+    "allow_codex_temporary_images": true,
+    "bubble_polish_timeout_seconds": 3.0,
+    "official_moderation_enhancement": false
+  }
+}
