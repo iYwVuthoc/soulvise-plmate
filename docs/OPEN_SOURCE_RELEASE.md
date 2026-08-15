@@ -4,7 +4,7 @@
 
 ## 仓库资料
 
-- 仓库：`runyelfy-art/soulvise-plmate`
+- 仓库：`iYwVuthoc/soulvise-plmate`
 - 可见性：Public
 - 默认分支：`main`
 - About：`Agent 的个性化 Agent：面向Windows 10/11，连接Codex及ACP Agent，提供桌面角色、认知、监督、陪看、情绪反馈和可扩展能力路由。`

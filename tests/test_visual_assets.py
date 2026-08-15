@@ -115,3 +115,31 @@ def test_packaging_generates_current_release_hash_manifest() -> None:
     assert "function Write-ReleaseManifest" in script
     assert script.count("Write-ReleaseManifest -Version $AppVersion") == 2
     assert "SHA256SUMS.txt" in script
+
+
+def test_nuitka_plugin_dependency_is_available_in_clean_test_environment() -> None:
+    """直接导入Nuitka插件的测试必须在干净CI环境声明固定构建依赖。"""
+
+    root = Path(__file__).parents[1]
+    development = (root / "requirements-dev.txt").read_text(encoding="utf-8")
+    locked = (root / "requirements.lock").read_text(encoding="utf-8")
+    project = (root / "pyproject.toml").read_text(encoding="utf-8")
+    assert "Nuitka==4.1.3" in development
+    assert "Nuitka==4.1.3" in locked
+    assert '"Nuitka==4.1.3"' in project
+
+
+def test_public_repository_links_use_current_owner() -> None:
+    """公开首页、包元数据和Issue入口不得继续指向旧的计划账号。"""
+
+    root = Path(__file__).parents[1]
+    public_files = (
+        root / "README.md",
+        root / "pyproject.toml",
+        root / "docs" / "OPEN_SOURCE_RELEASE.md",
+        root / ".github" / "ISSUE_TEMPLATE" / "config.yml",
+    )
+    for path in public_files:
+        content = path.read_text(encoding="utf-8")
+        assert "runyelfy-art" not in content
+        assert "iYwVuthoc/soulvise-plmate" in content

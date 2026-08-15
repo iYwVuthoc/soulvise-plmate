@@ -6,7 +6,7 @@
 >
 > Soulvise Plmate 并不试图重新制造所有 AI 能力，而是提供一个易于修改和扩展的桌面中枢：你可以随时更换主 Agent、为不同功能指定不同 Provider，也可以编写新的连接器，让角色形成属于自己的兴趣、表达方式和工作习惯。
 
-[![CI](https://github.com/runyelfy-art/soulvise-plmate/actions/workflows/ci.yml/badge.svg)](https://github.com/runyelfy-art/soulvise-plmate/actions/workflows/ci.yml)
+[![CI](https://github.com/iYwVuthoc/soulvise-plmate/actions/workflows/ci.yml/badge.svg)](https://github.com/iYwVuthoc/soulvise-plmate/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-3776AB.svg)](https://www.python.org/)
 
@@ -62,7 +62,7 @@
 
 ### 使用 Release
 
-1. 在 GitHub [Releases](https://github.com/runyelfy-art/soulvise-plmate/releases) 下载最新 Windows 安装器或便携版。
+1. 在 GitHub [Releases](https://github.com/iYwVuthoc/soulvise-plmate/releases) 下载最新 Windows 安装器或便携版。
 2. 对照同一 Release 中的 `SHA256SUMS.txt` 核对文件哈希。
 3. 安装器默认创建桌面与开始菜单快捷方式，不添加开机自启动。
 
@@ -73,7 +73,7 @@
 需要 64 位 Python 3.12：
 
 ```powershell
-git clone https://github.com/runyelfy-art/soulvise-plmate.git
+git clone https://github.com/iYwVuthoc/soulvise-plmate.git
 cd soulvise-plmate
 powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1
 powershell -ExecutionPolicy Bypass -File .\scripts\run.ps1
