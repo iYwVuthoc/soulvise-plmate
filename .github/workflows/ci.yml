@@ -22,7 +22,7 @@ jobs:
       PYTHONUTF8: "1"
     steps:
       - name: 检出源码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: 配置 Python 3.12
         uses: actions/setup-python@v5
